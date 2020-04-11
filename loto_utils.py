@@ -234,11 +234,11 @@ def main():
 
                         if humans_in_game == 0:
                             print("Все люди проиграли!")
-                            exit()
+                            # exit()
 
-                if player.card.num_in_card == 0:
-                    print('Игрок {} победил!'.format(player.name))
-                    exit()
+            if player.card.num_in_card == 0:
+                print('Игрок {} победил!'.format(player.name))
+                exit()
 
 
 main()
