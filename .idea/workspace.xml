@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="85b56b5d-2aa1-4374-a7ae-c69fa53ad1a6" name="Default Changelist" comment="">
+    <list default="true" id="85b56b5d-2aa1-4374-a7ae-c69fa53ad1a6" name="Default Changelist" comment="fix bag in game end when play only computer players">
+      <change afterPath="$PROJECT_DIR$/Loto_scripts/loto_game.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Loto_scripts/test_unittest_loto.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Loto.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Loto.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loto_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/loto_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loto.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Loto_scripts/loto.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loto_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/Loto_scripts/loto_utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,15 +40,61 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Loto_scripts" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.loto_utils">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Loto_scripts" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python tests.pytest in test_unittest_loto.py">
+    <configuration name="123" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Loto" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/123.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="loto_game" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Loto" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Loto_scripts/loto_game.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="loto_utils" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Loto" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -56,7 +107,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/loto_utils.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Loto_scripts/loto_utils.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -65,31 +116,45 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="testing" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="pytest in Loto_scripts" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="Loto" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Loto_scripts" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/Loto_scripts&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest in test_unittest_loto.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="Loto" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testing.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/Loto_scripts/test_unittest_loto.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.pytest in test_unittest_loto.py" />
+        <item itemvalue="Python tests.pytest in Loto_scripts" />
+        <item itemvalue="Python.123" />
+        <item itemvalue="Python.loto_game" />
         <item itemvalue="Python.loto_utils" />
-        <item itemvalue="Python.testing" />
       </list>
     </recent_temporary>
   </component>
@@ -118,15 +183,75 @@
       <option name="project" value="LOCAL" />
       <updated>1584799844373</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fix bag in game end when play only computer players">
+      <created>1586584424902</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1586584424902</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="start project" />
     <MESSAGE value="2 players, player and computer&#10;no chouse players&#10;no print cards good" />
-    <option name="LAST_COMMIT_MESSAGE" value="2 players, player and computer&#10;no chouse players&#10;no print cards good" />
+    <MESSAGE value="fix bag in game end when play only computer players" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix bag in game end when play only computer players" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="690" y="354" width="597" height="396" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1589605709775">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="690" y="354" width="597" height="396" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1589605709775" />
+    <state x="600" y="111" width="912" height="883" key="CommitChangelistDialog2" timestamp="1589606150594">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="600" y="111" width="912" height="883" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1589606150594" />
+    <state x="771" y="296" width="424" height="513" key="FileChooserDialogImpl" timestamp="1589605927716">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="771" y="296" width="424" height="513" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1589605927716" />
+    <state width="1830" height="547" key="GridCell.Tab.0.bottom" timestamp="1589606075672">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1830" height="547" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1589606075672" />
+    <state width="1830" height="547" key="GridCell.Tab.0.center" timestamp="1589606075671">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1830" height="547" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1589606075671" />
+    <state width="1830" height="547" key="GridCell.Tab.0.left" timestamp="1589606075671">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1830" height="547" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1589606075671" />
+    <state width="1830" height="547" key="GridCell.Tab.0.right" timestamp="1589606075671">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1830" height="547" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1589606075671" />
+    <state width="1830" height="344" key="GridCell.Tab.1.bottom" timestamp="1586963522859">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1830" height="344" key="GridCell.Tab.1.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1586963522859" />
+    <state width="1830" height="344" key="GridCell.Tab.1.center" timestamp="1586963522858">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1830" height="344" key="GridCell.Tab.1.center/67.27.1853.1053@67.27.1853.1053" timestamp="1586963522858" />
+    <state width="1830" height="344" key="GridCell.Tab.1.left" timestamp="1586963522858">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1830" height="344" key="GridCell.Tab.1.left/67.27.1853.1053@67.27.1853.1053" timestamp="1586963522858" />
+    <state width="1830" height="344" key="GridCell.Tab.1.right" timestamp="1586963522858">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1830" height="344" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1586963522858" />
+    <state x="376" y="101" key="SettingsEditor" timestamp="1589606258359">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="376" y="101" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1589606258359" />
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1586584472826">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1586584472826" />
     <state x="704" y="361" key="com.intellij.ide.util.TipDialog" timestamp="1586339868737">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
