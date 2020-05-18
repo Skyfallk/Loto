@@ -50,8 +50,11 @@ def main():
         print('Выбран номер:', current_num, '(Осталось {})'.format(bag.check_number()))
 
         for n, player in enumerate(players):
-
+            print(player)
+            print('Осталось чисел:', len(player))
             print(player.show_card())
+            # проверка работы магического метода getitem
+            print(player.card[1], player.card[-1], player.card[7], player.card[-7], player.card[11], player.card[-12])
 
             if player.player_type == 'Компьютер':
 
@@ -70,7 +73,7 @@ def main():
 
                         if humans_in_game == 0:
                             print("Все люди проиграли!")
-                            exit()
+                            # exit()
 
                 elif answer == 'n':
 

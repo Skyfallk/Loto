@@ -60,6 +60,27 @@ class Bag:
         self.__del_number(number)
         return number
 
+    def __str__(self):
+        """
+        Выводим номера бочонков которые остались в мешке с помощью магического метода str
+        Метод вызывается при вызове переменной с объектом класса
+        :return: номера бочонков которые остались в мешке
+        """
+        return self.numbers_list
+
+    def __len__(self):
+        """
+        Выводим количество бочонков оставшихся в мешке
+        :return:
+        """
+        return self.check_number()
+
+    def __getitem__(self, item):
+        return self.numbers_list[item]
+
+    def __eq__(self, other):
+        return self.numbers_list == other.numbers_list
+
 
 class Card:
 
@@ -120,6 +141,40 @@ class Card:
 
         return res_str
 
+    def __str__(self):
+        """
+        Сформировываем строку с визуализацией карточки.
+        :return: строка с числами на карточке с визуализацией
+        """
+        res = self.prepear_card()
+        return res
+
+    def __len__(self):
+        """
+        Выводим количество незачеркнутых чисел в карточке
+        :return:
+        """
+        return self.num_in_card
+
+    def __getitem__(self, item):
+        if item >= 0:
+            if item < 5:
+                return self.card_lines['line_1'][item]
+            elif item < 10:
+                return self.card_lines['line_2'][item-5]
+            elif item < 16:
+                return self.card_lines['line_3'][item-10]
+        else:
+            if item > -6:
+                return self.card_lines['line_3'][item]
+            elif item > -11:
+                return self.card_lines['line_2'][item+5]
+            elif item > -16:
+                return self.card_lines['line_3'][item+10]
+
+    def __eq__(self, other):
+        return self.numbers == other.numbers
+
 
 class Player:
     players_type = ('Человек', 'Компьютер')
@@ -145,10 +200,29 @@ class Player:
         header = start_count * '-' + self.name + start_count * '-'
         end = '-' * self.card.length_card + '\n'
         res = '\n'.join([header,
-                         self.card.prepear_card()])
+                         str(self.card)
+                         # self.card.prepear_card()
+                         ])
         res += end
 
         return res
+
+    def __str__(self):
+        """
+        Выводим информацию о игроке, имя и тип
+        :return:
+        """
+        return ', '.join(['Игрок ' + self.name, self.player_type])
+
+    def __len__(self):
+        """
+        Возвращаем колчисество незачеркнутых чисел в карточке игрока
+        :return:
+        """
+        return len(self.card)
+
+    def __eq__(self, other):
+        return self.name == other.name and self.players_type == other.player_type
 
 # def main():
 #     bag = Bag(MAX_NUMBERS)
